@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class TouchingPlayer : MonoBehaviour
 {
+    public Transform pl;
 	public UnityEvent startFireworks;
     // Start is called before the first frame update
     void Start()
