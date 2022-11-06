@@ -17,10 +17,13 @@ public class SpawnText : MonoBehaviour {
 	public bool createText = false;
 	public LayerMask lm;
 	public GameObject textHolder;
+	public GameObject boxBreathing;
+	public Transform boxBreathingSpawn;
 	public List<Transform> spawnPoints = new List<Transform>();
 	//public List<GameObject> textObjects = new List<GameObject>();
 	public List<string> phrases = new List<string>();
 	public float interval = 2.0f;
+	
 
 
 	private void Awake() {
@@ -39,7 +42,7 @@ public class SpawnText : MonoBehaviour {
 		return this.transform.position;
 	}
 
-	private void spawnSingle() {
+	private void SpawnSingle() {
 		Vector3 new1 = GetYWithRaycast(spawnPoints[0]);
 		GameObject t = Instantiate(textHolder, new1, new Quaternion(0, 0, 0, 0));
 		t.GetComponent<PhraseHolder>().SetText(phrases[0]);
@@ -47,19 +50,23 @@ public class SpawnText : MonoBehaviour {
 		phrases.RemoveAt(0);
 		//textObjects.RemoveAt(0);
 	}
-	public void spawnAll() {
+	public void SpawnAll() {
 		StartCoroutine(TextSpawn());
 	}
 	private IEnumerator TextSpawn() {
 		while (spawnPoints.Count > 0) {
-			spawnSingle();
+			SpawnSingle();
 			yield return new WaitForSeconds(interval);
+		}
+		if (boxBreathing != null) {
+			Vector3 newPos = GetYWithRaycast(boxBreathingSpawn);
+			Instantiate(boxBreathing, newPos, new Quaternion(0, 0, 0, 0));
 		}
 	}
 
 	private void Update() {
 		if (createText == true) {
-			spawnAll();
+			SpawnAll();
 			createText = false;
 		}
 	}

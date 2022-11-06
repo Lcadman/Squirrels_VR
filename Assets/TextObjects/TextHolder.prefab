@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 7280282540305930701}
   - component: {fileID: 5243920323958682150}
   - component: {fileID: 6136681898975670408}
+  - component: {fileID: 16790884739756139}
   m_Layer: 5
   m_Name: TextHolder
   m_TagString: Untagged
@@ -278,3 +279,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phrase: 
   textMesh: {fileID: 7280282539742383903}
+--- !u!114 &16790884739756139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7280282540305930706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3cac98b10af09408d15b4e42202947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 30

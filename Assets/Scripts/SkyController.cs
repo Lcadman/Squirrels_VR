@@ -25,6 +25,10 @@ public class SkyController : MonoBehaviour
         
     }
 
+	public void ToggleNight() {
+		isNight = !isNight;
+	}
+
     // Update is called once per frame
     void Update()
     {
