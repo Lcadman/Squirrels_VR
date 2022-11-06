@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a10532f9216e545b316f65642152de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 4
+  length: 3
 --- !u!1 &4002148173964307940
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minScale: 1
   maxScale: 1.5
-  lerpDuration: 4
+  lerpDuration: 3
 --- !u!1 &4914869220224023021
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   - Hold
   - Breath out
   - Hold
-  interval: 4
+  interval: 3
   textGUI: {fileID: 4914869221857373984}
 --- !u!1 &4914869221857373990
 GameObject:
