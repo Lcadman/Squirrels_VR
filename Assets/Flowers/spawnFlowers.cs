@@ -31,7 +31,7 @@ public class spawnFlowers : MonoBehaviour
 		//Debug.Log("rayPosition100: " + rayPosition);
 		if (Physics.Raycast(rayPosition, Vector3.down, out hit, 200f, layerMask: lm))
 		{
-			print(hit.point);
+			//print(hit.point);
 			Vector3 final = new Vector3(hit.point.x, hit.point.y, hit.point.z);
 			GameObject flow = Instantiate(flower_objects[0], final, Quaternion.identity);
 			//flow.transform.Rotate(0f, 0f, Random.Range(0, 100));

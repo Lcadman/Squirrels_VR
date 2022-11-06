@@ -4913,7 +4913,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914383685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5025,6 +5025,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 17ede1c72353eca48ae9e8295e231a0c, type: 3}
       propertyPath: m_Name
       value: PineTree_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17ede1c72353eca48ae9e8295e231a0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ede1c72353eca48ae9e8295e231a0c, type: 3}
@@ -9796,7 +9800,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978771705}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13082,7 +13086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3cac98b10af09408d15b4e42202947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 10
+  seconds: 30
 --- !u!1 &126779536973630446
 GameObject:
   m_ObjectHideFlags: 0
@@ -14508,7 +14512,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  delay: 5
+  delay: 4
 --- !u!1 &355610074643091540
 GameObject:
   m_ObjectHideFlags: 0
@@ -26088,7 +26092,7 @@ MonoBehaviour:
   - It's okay
   - Stay calm
   - Let's take some deep breaths
-  - Breath along
+  - Breathe along
   interval: 2
 --- !u!1 &3952486326858431974
 GameObject:
@@ -33952,7 +33956,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c97eba138bb6c64697ea7ca63a27ad7, type: 2}
+  - {fileID: 2100016, guid: 5d99170346720004e81354b0000c797c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34058,7 +34062,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 5326173250760451214, guid: 213bcd19c6bab63479b769c85a8142a1, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 6232745470854775269}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -34275,7 +34279,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 0
-  m_ModelPrefab: {fileID: 5326173250760451214, guid: 213bcd19c6bab63479b769c85a8142a1, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 6232745470729633434}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -34807,7 +34811,7 @@ Transform:
   m_GameObject: {fileID: 6232745470854775266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.838, y: 0.229, z: 0}
-  m_LocalScale: {x: 1, y: -1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: -1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6232745470682200961}
@@ -35078,7 +35082,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 1063691254097742263, guid: 09008439fe314f84e9fcfa2d52234e9a, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 6232745471319173307}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -35491,7 +35495,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c97eba138bb6c64697ea7ca63a27ad7, type: 2}
+  - {fileID: 2100016, guid: 5d99170346720004e81354b0000c797c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35696,7 +35700,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 0
-  m_ModelPrefab: {fileID: 1063691254097742263, guid: 09008439fe314f84e9fcfa2d52234e9a, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 6232745472067730544}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -36079,7 +36083,7 @@ GameObject:
   - component: {fileID: 6232939604960384509}
   - component: {fileID: 6232939604960384508}
   - component: {fileID: 6232939604960384512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -499,9 +499,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phrases:
-  - Breath in
+  - Breathe in
   - Hold
-  - Breath out
+  - Breathe out
   - Hold
   interval: 3
   textGUI: {fileID: 4914869221857373984}

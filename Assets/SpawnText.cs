@@ -34,7 +34,7 @@ public class SpawnText : MonoBehaviour {
 		Vector3 rayPosition = s.position;
 		rayPosition.y = 100;
 		if (Physics.Raycast(rayPosition, Vector3.down, out hit, 200f, layerMask: lm)) {
-			print(hit.point);
+			//print(hit.point);
 			Vector3 final = new Vector3(hit.point.x, hit.point.y + 3, hit.point.z);
 			return final;
 
