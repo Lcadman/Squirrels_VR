@@ -2,26 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GetMainCamera : MonoBehaviour
-{
+public class GetMainCamera : MonoBehaviour {
 	private Camera mainCam;
-    // Start is called before the first frame update
-    void Start()
-    {
-		GetComponent<Canvas>().worldCamera = Camera.main;
+	// Start is called before the first frame update
+	void Start() {
+		if (GetComponent<Canvas>() != null) {
+			GetComponent<Canvas>().worldCamera = mainCam;
+		}
 		mainCam = Camera.main;
+		FacePlayer();
 	}
 
-	
 
-	// Update is called once per frame
-	void Update()
-	{
-		//transform.LookAt(mainCam.transform);
-
+	void FacePlayer() {
 		transform.LookAt(2 * transform.position - mainCam.transform.position);
+	}
+	// Update is called once per frame
+	void Update() {
+		//FacePlayer();
+		
 	}
 }
 
-  
+
 
