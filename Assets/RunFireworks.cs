@@ -17,25 +17,16 @@ public class RunFireworks : MonoBehaviour
     {
         while (timeRemaining > 0)
         {
-            int prefabIndex = UnityEngine.Random.Range(3, 5);
-            yield return new WaitForSeconds(1);
-            Instantiate(fireworks[prefabIndex]);
-            prefabIndex = UnityEngine.Random.Range(0, 2);
-            yield return new WaitForSeconds(1);
-            Instantiate(fireworks[prefabIndex]);
-            prefabIndex = UnityEngine.Random.Range(3, 5);
-            yield return new WaitForSeconds(1);
-            Instantiate(fireworks[prefabIndex]);
-            prefabIndex = UnityEngine.Random.Range(0, 2);
-            yield return new WaitForSeconds(1);
-            Instantiate(fireworks[prefabIndex]);
-            prefabIndex = UnityEngine.Random.Range(3, 5);
-            yield return new WaitForSeconds(1);
-            Instantiate(fireworks[prefabIndex]);
-            prefabIndex = UnityEngine.Random.Range(0, 3);
-            yield return new WaitForSeconds(1);
-            Instantiate(fireworks[prefabIndex]);
-            timeRemaining -= 6;
+            int i = 5;
+            while (i > 0)
+            {
+                float random_wait = UnityEngine.Random.Range(0f, 2f);
+                int prefabIndex = UnityEngine.Random.Range(3, 5);
+                yield return new WaitForSeconds(random_wait);
+                Instantiate(fireworks[prefabIndex], transform.position, Quaternion.identity);
+                i -= 1;
+            }
+            timeRemaining -= 1;
         }
         
     }
