@@ -41,19 +41,22 @@ public class SpawnText : MonoBehaviour
 		return this.transform.position;
 	}
 
-	public void spawnText()
+	public void spawnSingle()
 	{
 			Vector3 new1 = GetYWithRaycast(spawnPoints[0]);
 			Instantiate(textObjects[0], new1, new Quaternion(0, 0, 0, 0));
 			spawnPoints.RemoveAt(0);
 			textObjects.RemoveAt(0);
 	}
-
+	public void spawnAll()
+	{
+		StartCoroutine(textSpawn());
+	}
 	public IEnumerator textSpawn()
 	{
 		while(spawnPoints.Count > 0)
 		{
-			spawnText();
+			spawnSingle();
 			yield return new WaitForSeconds(4);
 		}
 	}
@@ -62,7 +65,7 @@ public class SpawnText : MonoBehaviour
 	{
 		if (createText == true)
 		{
-			spawnText();
+			spawnAll();
 			createText = false;
 		}
 	}
