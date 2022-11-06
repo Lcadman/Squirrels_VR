@@ -7,16 +7,20 @@ using UnityEngine.InputSystem.HID;
 
 public class SpawnText : MonoBehaviour
 {
-	public Transform s1;
-	public Transform s2;
-	public Transform s3;
-	public Transform s4;
-	public GameObject g1;
-	public GameObject g2;
-	public GameObject g3;
-	public GameObject g4;
+	//public Transform s1;
+	//public Transform s2;
+	//public Transform s3;
+	//public Transform s4;
+	//public GameObject g1;
+	//public GameObject g2;
+	//public GameObject g3;
+	//public GameObject g4;
 	public bool createText = false;
 	public LayerMask lm;
+
+	public List<Transform> spawnPoints = new List<Transform>();
+	public List<GameObject> textObjects = new List<GameObject>();
+
 
 	private void Awake()
 	{
@@ -37,24 +41,31 @@ public class SpawnText : MonoBehaviour
 		return this.transform.position;
 	}
 
-	public void spawnText()
+	public void spawnSingle()
 	{
-		Vector3 new1 = GetYWithRaycast(s1);
-		Vector3 new2 = GetYWithRaycast(s2);
-		Vector3 new3 = GetYWithRaycast(s3);
-		Vector3 new4 = GetYWithRaycast(s4);
-		Instantiate(g1, new1, new Quaternion(0, 0, 0, 0));
-		Instantiate(g2, new2, new Quaternion(0, 0, 0, 0));
-		Instantiate(g3, new3, new Quaternion(0, 0, 0, 0));
-		Instantiate(g4, new4, new Quaternion(0, 0, 0, 0));
-
+			Vector3 new1 = GetYWithRaycast(spawnPoints[0]);
+			Instantiate(textObjects[0], new1, new Quaternion(0, 0, 0, 0));
+			spawnPoints.RemoveAt(0);
+			textObjects.RemoveAt(0);
+	}
+	public void spawnAll()
+	{
+		StartCoroutine(textSpawn());
+	}
+	public IEnumerator textSpawn()
+	{
+		while(spawnPoints.Count > 0)
+		{
+			spawnSingle();
+			yield return new WaitForSeconds(4);
+		}
 	}
 
 	private void Update()
 	{
 		if (createText == true)
 		{
-			spawnText();
+			spawnAll();
 			createText = false;
 		}
 	}
