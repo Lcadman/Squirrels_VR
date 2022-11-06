@@ -27,7 +27,6 @@ public class SpawnText : MonoBehaviour {
 
 
 	private void Awake() {
-
 		lm = LayerMask.GetMask("Ground", "Objects");
 	}
 	private Vector3 GetYWithRaycast(Transform s) {
