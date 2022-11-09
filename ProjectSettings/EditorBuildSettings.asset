@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/WorldFlatscreen.unity
+    guid: 28b619cdcd9bf2745abcab8b23bf87c2
+  - enabled: 1
     path: Assets/Scenes/WorldInteractionDemo.unity
     guid: 3d16fc5db26e2354e9ac2a5031a52e6d
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: c73b900e4bace6d4db2eee9dbcce6484, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 12fb2884f45e57a48a232b374653f4dd, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 4f94786a5936f1b43b14ce21aba20e69, type: 2}

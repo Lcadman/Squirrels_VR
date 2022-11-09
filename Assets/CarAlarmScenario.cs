@@ -15,7 +15,7 @@ public class CarAlarmScenario : MonoBehaviour {
 	public IEnumerator runScenario() {
 		//print("ran");
 		events[0].Invoke();
-		yield return new WaitForSeconds(delay);
+		yield return new WaitForSeconds(delay/3);
 		events[1].Invoke();
 		yield return new WaitForSeconds(delay);
 		events[2].Invoke();
