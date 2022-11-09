@@ -12,7 +12,7 @@ public class Fade : MonoBehaviour
 		foreach (var renderer in renderers)
 		{
 			Color newColor = renderer.material.color;
-			newColor.a = 0.3f;
+			newColor.a = 1f;
 			renderer.material.SetColor("_Color", newColor);
 			while (renderer.material.color.a > 0)
 			{

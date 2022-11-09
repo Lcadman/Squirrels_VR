@@ -60,7 +60,7 @@ public class SpawnText : MonoBehaviour {
 		}
 		if (boxBreathing != null) {
 			Vector3 newPos = GetYWithRaycast(boxBreathingSpawn);
-			Instantiate(boxBreathing, newPos, new Quaternion(0, 0, 0, 0));
+			Instantiate(boxBreathing, boxBreathingSpawn);
 		}
 	}
 
